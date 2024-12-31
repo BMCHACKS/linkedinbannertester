@@ -1,0 +1,88 @@
+body {
+    font-family: 'DM Sans';
+    background-color: #f4f2ee; /* Off-white background */
+    margin: 0;
+    padding: 20px;
+    color: #333; /* Darker text color for better contrast */
+    display: flex; /* Use flexbox to center the container */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    flex-direction: column; /* Stack elements vertically */
+}
+
+.container {
+    max-width: 800px;
+    width: 100%; /* Make it responsive */
+    background: #ffffff; /* White background for the container */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.upload-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+}
+
+.banner-upload, .pfp-upload {
+    margin-bottom: 20px;
+    width: 100%; /* Make the upload sections take full width */
+    display: flex; /* Use flexbox for the upload sections */
+    justify-content: space-between; /* Space between title and button */
+}
+
+input[type="file"] {
+    display: none; /* Hide the default file input */
+}
+
+label {
+    background: #86aff5;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 20px; /* Add space above the label */
+}
+
+label:hover {
+    background: #1064be;
+}
+
+.banner-preview {
+    margin-top: 10px;
+    width: 800px; /* Set width for the banner */
+    height: 200px; /* Set height for the banner */
+    position: relative; /* Position relative for absolute positioning of PFP */
+    background-color: #f2f2f2; /* Grey background for the banner */
+    border-radius: 8px;
+    background-size: cover; /* Ensure the background image covers the entire area */
+    background-position: center; /* Center the background image */
+    transition: background 0.3s;
+}
+
+.pfp-preview {
+    position: absolute; /* Position absolutely within the banner */
+    bottom: 0px; /* Position at the bottom */
+    top: 100px;
+    left: 30px; /* 50px margin from the left */
+    width: 150px; /* Set width for PFP */
+    height: 150px; /* Set height for PFP */
+    border-radius: 50%; /* Make it circular */
+    border: 3px solid white; /* Optional: add a border for better visibility */
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.pfp-preview:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
